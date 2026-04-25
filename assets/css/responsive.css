@@ -1,0 +1,174 @@
+/* =====================
+   TABLET — 1024px
+   ===================== */
+@media (max-width: 1024px) {
+
+    :root {
+        --container-pad: 40px;
+        --font-size-4xl: 48px;
+        --font-size-3xl: 36px;
+        --font-size-2xl: 28px;
+    }
+
+    /* Hero */
+    .hero__inner { grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); }
+    .hero__title { font-size: 42px; }
+
+    /* About */
+    .about-hero__inner { grid-template-columns: 1fr 1fr; }
+    .about-values__inner { grid-template-columns: 1fr; }
+    .about-values__grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Properties */
+    .properties-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Team */
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Services */
+    .service-block__grid { grid-template-columns: repeat(2, 1fr); }
+    .service-cta-card { grid-column: span 2; }
+    .service-block__investments { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+    .service-block__investments-right { grid-template-columns: repeat(2, 1fr); }
+
+    /* Contact */
+    .contact-info__grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Footer */
+    .footer__inner { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+    .footer__links { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =====================
+   MOBILE — 768px
+   ===================== */
+@media (max-width: 768px) {
+
+    :root {
+        --container-pad: 20px;
+        --spacing-xl: 48px;
+        --spacing-2xl: 64px;
+        --font-size-4xl: 36px;
+        --font-size-3xl: 28px;
+        --font-size-2xl: 24px;
+    }
+
+    /* Announcement bar */
+    .announcement-bar { padding: 10px 20px; font-size: 11px; }
+
+    /* Navbar */
+    .navbar__nav {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100vh;
+        background: var(--color-bg-primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-md);
+        z-index: 999;
+    }
+    .navbar__nav.open { display: flex; }
+    .navbar__nav .navbar__link {
+        font-size: var(--font-size-lg);
+        padding: 12px 32px;
+    }
+    .navbar__cta { display: none; }
+    .navbar__hamburger { display: flex; z-index: 1000; position: relative; }
+
+    /* Hero */
+    .hero__inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: var(--spacing-lg);
+    }
+    .hero__image { order: -1; min-height: 300px; }
+    .hero__image-wrapper { max-width: 100%; aspect-ratio: 16/10; }
+    .hero__title { font-size: 32px; letter-spacing: -0.5px; }
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    .hero__stat-divider { display: none; }
+    .hero__actions { flex-wrap: wrap; }
+
+    /* Services strip */
+    .services-strip__grid { grid-template-columns: 1fr 1fr; }
+    .services-strip__item { border-right: none; border-bottom: 1px solid var(--color-border); }
+    .services-strip__item:nth-child(odd) { border-right: 1px solid var(--color-border); }
+
+    /* Section headers */
+    .section-header { flex-direction: column; align-items: flex-start; gap: var(--spacing-sm); }
+    .section-header h2 { font-size: 24px; }
+
+    /* Properties grid */
+    .properties-grid { grid-template-columns: 1fr; }
+
+    /* Testimonials */
+    .testimonials-grid { grid-template-columns: 1fr; }
+
+    /* FAQ */
+    .faq-grid { grid-template-columns: 1fr; }
+
+    /* CTA Banner */
+    .cta-banner__inner { flex-direction: column; align-items: flex-start; gap: var(--spacing-md); }
+
+    /* About */
+    .about-hero__inner { grid-template-columns: 1fr; }
+    .about-hero__image { display: none; }
+    .about-values__inner { grid-template-columns: 1fr; }
+    .about-values__grid { grid-template-columns: 1fr; }
+    .achievements-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+    .clients-grid { grid-template-columns: 1fr; }
+
+    /* Properties page */
+    .properties-search { flex-direction: column; align-items: stretch; padding: var(--spacing-sm); }
+    .properties-filters { flex-direction: column; }
+    .properties-filter { min-width: auto; }
+    .form-grid--4 { grid-template-columns: 1fr 1fr; }
+    .form-grid--3 { grid-template-columns: 1fr; }
+    .form-grid--2 { grid-template-columns: 1fr; }
+    .form-footer { flex-direction: column; gap: var(--spacing-sm); align-items: flex-start; }
+    .form-contact-method { grid-template-columns: 1fr; }
+
+    /* Services */
+    .service-block__grid { grid-template-columns: 1fr; }
+    .service-cta-card { grid-column: span 1; }
+    .service-block__investments { grid-template-columns: 1fr; }
+    .service-block__investments-right { grid-template-columns: 1fr; }
+
+    /* Contact */
+    .contact-info__grid { grid-template-columns: 1fr 1fr; }
+    .offices-grid { grid-template-columns: 1fr; }
+    .contact-gallery__grid { grid-template-columns: 1fr; }
+    .contact-gallery__images { grid-template-columns: 1fr 1fr; }
+    .contact-gallery__images img:first-child { grid-column: span 2; }
+
+    /* Footer */
+    .footer__inner { grid-template-columns: 1fr; }
+    .footer__links { grid-template-columns: repeat(2, 1fr); }
+    .footer__bottom-inner { flex-direction: column; gap: var(--spacing-sm); text-align: center; }
+}
+
+/* =====================
+   SMALL MOBILE — 480px
+   ===================== */
+@media (max-width: 480px) {
+
+    :root { --container-pad: 16px; }
+
+    .hero__title { font-size: 28px; }
+    .services-strip__grid { grid-template-columns: 1fr; }
+    .services-strip__item { border-right: none; }
+    .team-grid { grid-template-columns: 1fr; }
+    .contact-info__grid { grid-template-columns: 1fr; }
+    .footer__links { grid-template-columns: 1fr 1fr; }
+    .form-grid--4 { grid-template-columns: 1fr; }
+    .about-values__grid { grid-template-columns: 1fr; }
+    .property-card__footer { flex-direction: column; align-items: flex-start; }
+    .property-card__footer .btn { width: 100%; justify-content: center; }
+}
