@@ -9,26 +9,21 @@
 
 <!-- ANNOUNCEMENT BAR -->
 <div class="announcement-bar" id="announcementBar">
-    <div class="announcement-bar__content">
-        <span class="announcement-bar__dot"></span>
-        <p>Discover Your Dream Property with Estatein. <a href="<?php echo get_permalink(get_page_by_path('properties')); ?>">Learn More</a></p>
-    </div>
-    <button class="announcement-bar__close" id="closeAnnouncement" aria-label="Close">&#x2715;</button>
+<div class="announcement-bar__content">
+<span class="announcement-bar__dot">&#x2728;</span>
+<p>Discover Your Dream Property with Estatein. <a href="<?php echo get_permalink(get_page_by_path('properties')); ?>">Learn More</a></p>
+</div>
+<button class="announcement-bar__close" id="closeAnnouncement" aria-label="Close">&#x2715;</button>
 </div>
 
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container navbar__inner">
 
-        <!-- Logo -->
-        <a href="<?php echo home_url(); ?>" class="navbar__logo">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="#7B5EA7"/>
-                <path d="M14 6L7 10.5V17.5L14 22L21 17.5V10.5L14 6Z" fill="#9B7EC7"/>
-                <circle cx="14" cy="14" r="3" fill="#fff"/>
-            </svg>
-            <span>Estatein</span>
-        </a>
+<!-- Logo -->
+<a href="<?php echo home_url(); ?>" class="navbar__logo">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-icon.svg" alt="Estatein" width="160" height="48">
+</a>
 
         <!-- Nav Links -->
         <nav class="navbar__nav" id="navMenu">

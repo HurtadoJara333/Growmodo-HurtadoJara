@@ -1,56 +1,55 @@
 <section class="hero" id="hero">
-    <div class="container hero__inner">
-        <div class="hero__content">
-            <div class="hero__badge">
-                <span class="hero__badge-dot"></span>
-                <span>No. 1 Real Estate Platform</span>
-            </div>
-            <h1 class="hero__title">Discover Your Dream Property with <span class="hero__title-accent">Estatein</span></h1>
-            <p class="hero__desc">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
-            <div class="hero__actions">
-                <a href="<?php echo get_permalink(get_page_by_path('properties')); ?>" class="btn btn-outline">Learn More</a>
-                <a href="<?php echo get_permalink(get_page_by_path('properties')); ?>" class="btn btn-primary">Browse Properties</a>
-            </div>
-            <div class="hero__stats">
-                <div class="hero__stat">
-                    <span class="hero__stat-num">200+</span>
-                    <span class="hero__stat-label">Happy Customers</span>
-                </div>
-                <div class="hero__stat-divider"></div>
-                <div class="hero__stat">
-                    <span class="hero__stat-num">10k+</span>
-                    <span class="hero__stat-label">Properties For Clients</span>
-                </div>
-                <div class="hero__stat-divider"></div>
-                <div class="hero__stat">
-                    <span class="hero__stat-num">16+</span>
-                    <span class="hero__stat-label">Years of Experience</span>
-                </div>
-            </div>
-        </div>
+<div class="container hero__inner">
+<div class="hero__content">
+<div class="hero__badge">
+<span>Discover Your Dream Property with Estatein</span>
+</div>
+<h1 class="hero__title">Discover Your Dream Property with Estatein</h1>
+<p class="hero__desc">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
+<div class="hero__actions">
+<a href="<?php echo get_permalink(get_page_by_path('properties')); ?>" class="btn btn-outline">Learn More</a>
+<a href="<?php echo get_permalink(get_page_by_path('properties')); ?>" class="btn btn-primary">Browse Properties</a>
+</div>
+<div class="hero__stats">
+<div class="hero__stat">
+<span class="hero__stat-num">200+</span>
+<span class="hero__stat-label">Happy Customers</span>
+</div>
+<div class="hero__stat-divider"></div>
+<div class="hero__stat">
+<span class="hero__stat-num">10k+</span>
+<span class="hero__stat-label">Properties For Clients</span>
+</div>
+<div class="hero__stat-divider"></div>
+<div class="hero__stat">
+<span class="hero__stat-num">16+</span>
+<span class="hero__stat-label">Years of Experience</span>
+</div>
+</div>
+</div>
 
-        <div class="hero__image">
-            <div class="hero__image-glow"></div>
-            <div class="hero__image-wrapper">
-                <img 
-                    src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" 
-                    alt="Modern blue glass building"
-                >
-            </div>
-            <div class="hero__rotate-badge">
-                <svg viewBox="0 0 100 100" width="110" height="110">
-                    <defs>
-                        <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
-                    </defs>
-                    <text font-size="10.5" fill="#9DA3AE" font-family="Inter,sans-serif" letter-spacing="3.5">
-                        <textPath href="#circle">Your Dream Home Awaits • Find It Here •</textPath>
-                    </text>
-                </svg>
-                <div class="hero__rotate-arrow">↗</div>
-            </div>
-        </div>
+<div class="hero__image">
+<div class="hero__image-glow"></div>
+<div class="hero__image-wrapper">
+<img
+src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
+alt="Modern blue glass building"
+>
+</div>
+<div class="hero__rotate-badge">
+<svg viewBox="0 0 100 100" width="120" height="120">
+<defs>
+<path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+</defs>
+<text font-size="11" fill="#999999" font-family="Urbanist,sans-serif" letter-spacing="4">
+<textPath href="#circle">Your Dream Home Awaits • Find It Here •</textPath>
+</text>
+</svg>
+<div class="hero__rotate-arrow">&#8599;</div>
+</div>
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- SERVICES STRIP -->

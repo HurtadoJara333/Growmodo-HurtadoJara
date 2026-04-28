@@ -1,13 +1,13 @@
 <section class="section featured-properties" id="properties">
-    <div class="container">
-        <div class="section-header">
-            <div>
-                <div class="section-label">Properties</div>
-                <h2>Featured Properties</h2>
-                <p>Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein.</p>
-            </div>
-            <a href="<?php echo get_permalink(get_page_by_path('properties')); ?>" class="btn btn-outline">View All Properties</a>
-        </div>
+<div class="container">
+<div class="section-header">
+<div class="section-header__content">
+<div class="section-label">Properties</div>
+<h2>Featured Properties</h2>
+<p>Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein.</p>
+</div>
+<a href="<?php echo get_permalink(get_page_by_path('properties')); ?>" class="btn btn-outline">View All Properties</a>
+</div>
 
         <div class="properties-grid">
             <?php
@@ -46,23 +46,23 @@
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="property-card__body">
-                    <h3 class="property-card__title"><?php the_title(); ?></h3>
-                    <p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
-                    <div class="property-card__specs">
-                        <span class="property-card__spec">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-                            <?php echo $bedrooms; ?>-Bedroom
-                        </span>
-                        <span class="property-card__spec">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
-                            <?php echo $bathrooms; ?>-Bathroom
-                        </span>
-                        <span class="property-card__spec">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                            <?php echo $type; ?>
-                        </span>
-                    </div>
+<div class="property-card__body">
+<h3 class="property-card__title"><?php the_title(); ?></h3>
+<p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 12); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+<div class="property-card__specs">
+<span class="property-card__spec">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bed.svg" alt="Bed" width="20" height="20">
+<?php echo $bedrooms; ?>-Bedroom
+</span>
+<span class="property-card__spec">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bath.svg" alt="Bath" width="20" height="20">
+<?php echo $bathrooms; ?>-Bathroom
+</span>
+<span class="property-card__spec">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-villa.svg" alt="Type" width="20" height="20">
+<?php echo $type; ?>
+</span>
+</div>
                     <div class="property-card__footer">
                         <div class="property-card__price">
                             <span class="property-card__price-label">Price</span>
@@ -112,12 +112,16 @@
         </div>
 
         <!-- Pagination -->
-        <div class="slider-nav">
-            <span class="slider-nav__count">01 of 60</span>
-            <div class="slider-nav__arrows">
-                <button class="slider-nav__btn" aria-label="Previous">←</button>
-                <button class="slider-nav__btn" aria-label="Next">→</button>
-            </div>
-        </div>
+<div class="slider-nav">
+<span class="slider-nav__count"><span class="text-white">01</span> of 60</span>
+<div class="slider-nav__arrows">
+<button class="slider-nav__btn" aria-label="Previous">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+</button>
+<button class="slider-nav__btn" aria-label="Next">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</button>
+</div>
+</div>
     </div>
 </section>

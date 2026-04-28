@@ -7,14 +7,9 @@
 
         <!-- Brand col -->
         <div class="footer__brand">
-            <a href="<?php echo home_url(); ?>" class="navbar__logo footer__logo">
-                <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-                    <path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="#7B5EA7"/>
-                    <path d="M14 6L7 10.5V17.5L14 22L21 17.5V10.5L14 6Z" fill="#9B7EC7"/>
-                    <circle cx="14" cy="14" r="3" fill="#fff"/>
-                </svg>
-                <span>Estatein</span>
-            </a>
+<a href="<?php echo home_url(); ?>" class="navbar__logo footer__logo">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-icon.svg" alt="Estatein" width="160" height="48">
+</a>
             <form class="footer__newsletter" onsubmit="return false;">
                 <div class="footer__newsletter-input">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
