@@ -29,7 +29,7 @@
         <div class="about-hero__image">
             <div class="hero__image-glow"></div>
             <div class="about-hero__image-wrapper">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Real estate professional">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="Real estate professional">
             </div>
         </div>
     </div>

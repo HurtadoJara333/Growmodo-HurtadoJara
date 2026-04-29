@@ -12,6 +12,8 @@ TABLET — 1024px
     --spacing-2xl: 80px;
   }
 
+  .container { padding: 0 40px; }
+
   /* Hero */
   .hero__inner { grid-template-columns: 1fr; gap: var(--spacing-lg); min-height: auto; }
   .hero__image { order: -1; min-height: 300px; }
@@ -65,6 +67,8 @@ MOBILE — 768px
     --font-size-2xl: 22px;
     --font-size-xl: 18px;
   }
+
+  .container { padding: 0 20px; }
 
   /* Announcement bar */
   .announcement-bar { padding: 10px 20px; }
@@ -229,6 +233,8 @@ SMALL MOBILE — 480px
     --font-size-3xl: 22px;
     --font-size-2xl: 20px;
   }
+
+  .container { padding: 0 16px; }
 
   .hero__title { font-size: 26px; }
   .hero__badge {

@@ -120,7 +120,10 @@ $category = get_field('category') ?: 'Coastal Escapes';
 <div class="property-card__body">
 <p class="property-card__category"><?php echo $category; ?></p>
 <h3 class="property-card__title"><?php the_title(); ?></h3>
-<p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 18); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+<div class="property-card__desc-wrapper">
+<p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 18); ?></p>
+<a href="<?php the_permalink(); ?>" class="property-card__read-more">Read More</a>
+</div>
 <div class="property-card__specs">
 <span class="property-card__spec">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
@@ -169,7 +172,10 @@ foreach ($placeholders as $p) : ?>
 <div class="property-card__body">
 <p class="property-card__category"><?php echo $p[7]; ?></p>
 <h3 class="property-card__title"><?php echo $p[0]; ?></h3>
-<p class="property-card__desc">A stunning property offering breathtaking views and world-class amenities. Experience luxury living at its finest with modern design and premium finishes. <a href="#">Read More</a></p>
+<div class="property-card__desc-wrapper">
+<p class="property-card__desc">A stunning property offering breathtaking views and world-class amenities.</p>
+<a href="#" class="property-card__read-more">Read More</a>
+</div>
 <div class="property-card__specs">
 <span class="property-card__spec">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>

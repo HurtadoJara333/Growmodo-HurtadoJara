@@ -48,7 +48,10 @@
                 </div>
 <div class="property-card__body">
 <h3 class="property-card__title"><?php the_title(); ?></h3>
-<p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 12); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+<div class="property-card__desc-wrapper">
+<p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 18); ?></p>
+<a href="<?php the_permalink(); ?>" class="property-card__read-more">Read More</a>
+</div>
 <div class="property-card__specs">
 <span class="property-card__spec">
 <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bed.svg" alt="Bed" width="20" height="20">

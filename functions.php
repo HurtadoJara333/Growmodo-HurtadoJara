@@ -1,4 +1,11 @@
 <?php
+// Forzar HTTP_HOST para ngrok — debe ir PRIMERO
+if ( defined('NGROK_URL') && NGROK_URL ) {
+    $host = parse_url(NGROK_URL, PHP_URL_HOST);
+    $_SERVER['HTTP_HOST']   = $host;
+    $_SERVER['SERVER_NAME'] = $host;
+    $_SERVER['HTTPS']       = 'on';
+}
 require_once get_template_directory() . '/inc/enqueue.php';
 require_once get_template_directory() . '/inc/post-types.php';
 require_once get_template_directory() . '/inc/acf-fields.php';
@@ -11,6 +18,40 @@ function estatein_setup() {
     register_nav_menus(['primary' => __('Primary Menu', 'estatein')]);
 }
 add_action( 'after_setup_theme', 'estatein_setup' );
+
+if ( defined('NGROK_URL') && NGROK_URL ) {
+    $ngrok = rtrim(NGROK_URL, '/');
+    // Fuerza HTTP_HOST antes de que WordPress resuelva cualquier URL
+add_action('template_redirect', function() {
+    if ( defined('NGROK_URL') && NGROK_URL ) {
+        $host = parse_url(NGROK_URL, PHP_URL_HOST);
+        $_SERVER['HTTP_HOST']   = $host;
+        $_SERVER['SERVER_NAME'] = $host;
+        $_SERVER['HTTPS']       = 'on';
+    }
+}, 1);
+
+    add_filter( 'option_siteurl', fn() => $ngrok );
+    add_filter( 'option_home',    fn() => $ngrok );
+
+    add_filter( 'the_content', fn($c) => str_replace('https://localhost', $ngrok, $c) );
+
+    add_filter( 'upload_dir', function($dirs) use ($ngrok) {
+        $dirs['url']     = str_replace('https://localhost', $ngrok, $dirs['url']);
+        $dirs['baseurl'] = str_replace('https://localhost', $ngrok, $dirs['baseurl']);
+        return $dirs;
+    });
+
+    // Links de páginas del navbar
+    add_filter( 'page_link', fn($link) => str_replace('https://localhost', $ngrok, $link) );
+    add_filter( 'post_link', fn($link) => str_replace('https://localhost', $ngrok, $link) );
+    add_filter( 'post_type_link', fn($link) => str_replace('https://localhost', $ngrok, $link) );
+
+    // Por si WordPress usa HTTP_HOST para construir URLs
+    $_SERVER['HTTP_HOST']   = parse_url($ngrok, PHP_URL_HOST);
+    $_SERVER['HTTPS']       = 'on';
+    $_SERVER['SERVER_NAME'] = parse_url($ngrok, PHP_URL_HOST);
+}
 
 // SEO: meta description + OG tags
 function estatein_meta_description() {

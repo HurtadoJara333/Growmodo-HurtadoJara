@@ -132,6 +132,29 @@ button {
 }
 
 /* ==============================================
+GLOBAL CONTAINER
+============================================== */
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 162px;
+}
+
+/* ==============================================
+GLOBAL CARD
+============================================== */
+.card {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: #333333;
+}
+
+/* ==============================================
 ANNOUNCEMENT BAR - Figma: Banner Frame
 Exact specs: padding 18px 160px, gap 10px
 ============================================== */
@@ -503,9 +526,6 @@ SERVICES STRIP - Figma Specifications
 .services-strip__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .services-strip__item {
@@ -567,10 +587,6 @@ SECTION HEADERS - Figma Specifications
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 60px;
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 162px;
 }
 
 .section-header__content {
@@ -581,7 +597,7 @@ SECTION HEADERS - Figma Specifications
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 18px;
+  font-size: 16px;
   color: #999999;
   font-weight: 500;
   margin-bottom: 20px;
@@ -589,12 +605,18 @@ SECTION HEADERS - Figma Specifications
 }
 
 .section-label::before {
-  content: '';
+  content: '✦';
   display: inline-block;
-  width: 6px; 
-  height: 6px;
-  border-radius: 50%;
-  background: #703BF7;
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+.section-label::after {
+  content: '· ·';
+  display: inline-block;
+  font-size: 12px;
+  color: #666666;
+  letter-spacing: 2px;
 }
 
 .section-header h2 {
@@ -624,9 +646,6 @@ FEATURED PROPERTIES
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
   margin-bottom: 20px;
 }
 
@@ -756,9 +775,8 @@ FEATURED PROPERTIES
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1920px;
   margin: 20px auto 0;
-  padding: 20px 162px 0;
+  padding: 20px 0 0;
   border-top: 1px solid #262626;
 }
 
@@ -804,9 +822,6 @@ TESTIMONIALS
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .testimonial-card {
@@ -832,7 +847,7 @@ TESTIMONIALS
 .testimonial-card__stars svg {
   width: 24px;
   height: 24px;
-  fill: #703BF7;
+  fill: #F5A623;
 }
 
 .testimonial-card__title {
@@ -894,9 +909,7 @@ FAQ
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto 20px;
-  padding: 0 162px;
+  margin-bottom: 20px;
 }
 
 .faq-item {
@@ -995,9 +1008,6 @@ CTA BANNER
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .cta-banner__text {
@@ -1033,9 +1043,7 @@ FOOTER
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 60px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px 60px;
+  padding-bottom: 60px;
 }
 
 .footer__logo { 
@@ -1128,9 +1136,6 @@ FOOTER
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .footer__bottom p {
@@ -1176,9 +1181,6 @@ ABOUT US PAGE - Figma Specifications
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 80px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
   min-height: 480px;
 }
 
@@ -1341,9 +1343,6 @@ ABOUT US PAGE - Figma Specifications
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .achievement-card__inner { 
@@ -1392,9 +1391,6 @@ ABOUT US PAGE - Figma Specifications
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .process-card {
@@ -1440,9 +1436,6 @@ ABOUT US PAGE - Figma Specifications
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .team-card { 
@@ -1543,9 +1536,6 @@ ABOUT US PAGE - Figma Specifications
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
   margin-bottom: 20px;
 }
 
@@ -1622,17 +1612,18 @@ CONTACT PAGE - Figma Specifications
 }
 
 .contact-hero h1 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 600;
   margin: 12px 0 14px;
   color: #FFFFFF;
   font-family: 'Urbanist', sans-serif;
+  line-height: 120%;
 }
 
 .contact-hero > .container > p {
   font-size: 18px;
   color: #999999;
-  max-width: 680px;
+  max-width: 900px;
   line-height: 150%;
   font-family: 'Urbanist', sans-serif;
 }
@@ -1645,9 +1636,6 @@ CONTACT PAGE - Figma Specifications
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 162px;
 }
 
 .contact-info__card {
@@ -1704,9 +1692,52 @@ CONTACT PAGE - Figma Specifications
   padding: 100px 0;
 }
 
+.contact-form-section h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: #FFFFFF;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 120%;
+}
+
+.contact-form-section > .container > p {
+  font-size: 18px;
+  color: #999999;
+  max-width: 900px;
+  line-height: 150%;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.contact-form-section .properties-form {
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
 .contact-offices {
   background: #141414;
   padding: 100px 0;
+}
+
+.contact-offices h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: #FFFFFF;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 120%;
+}
+
+.contact-offices > .container > p {
+  font-size: 18px;
+  color: #999999;
+  max-width: 900px;
+  line-height: 150%;
+  font-family: 'Urbanist', sans-serif;
+  margin-bottom: 40px;
 }
 
 .contact-gallery {
@@ -2595,6 +2626,7 @@ flex-direction: row;
 align-items: flex-end;
 justify-content: space-between;
 gap: 20px;
+flex-wrap: wrap;
 }
 
 .property-card__price {
@@ -2847,172 +2879,6 @@ width: 20px;
 height: 20px;
 accent-color: #703BF7;
 cursor: pointer;
-}
-
-/* =====================
-CONTACT
-===================== */
-.contact-hero h1 {
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    margin: 12px 0 var(--spacing-sm);
-}
-.contact-hero > .container > p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    max-width: 680px;
-    line-height: 1.7;
-}
-.contact-info { padding: var(--spacing-md) 0; }
-.contact-info__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-md);
-}
-.contact-info__card {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-md);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transition: border-color var(--transition);
-}
-.contact-info__card:hover { border-color: var(--color-accent); }
-.contact-info__icon {
-    width: 48px; height: 48px;
-    border-radius: var(--radius-sm);
-    background: var(--color-accent-light);
-    border: 1px solid rgba(123,94,167,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-accent);
-}
-.contact-info__arrow {
-    position: absolute;
-    top: var(--spacing-md);
-    right: var(--spacing-md);
-    font-size: 18px;
-    color: var(--color-text-muted);
-}
-.contact-info__label {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-}
-.contact-info__value {
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--color-text-primary);
-}
-.form-grid--3 { grid-template-columns: repeat(3, 1fr); }
-.offices-tabs {
-    display: flex;
-    gap: 8px;
-    margin: var(--spacing-lg) 0 var(--spacing-md);
-}
-.offices-tab {
-    padding: 8px 20px;
-    border-radius: 99px;
-    border: 1px solid var(--color-border);
-    background: transparent;
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    font-family: var(--font-primary);
-    cursor: pointer;
-    transition: all var(--transition);
-}
-.offices-tab.active,
-.offices-tab:hover {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-    color: #fff;
-}
-.offices-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-}
-.office-card {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: border-color var(--transition);
-}
-.office-card:hover { border-color: var(--color-accent); }
-.office-card__inner { padding: var(--spacing-md); }
-.office-card__header { margin-bottom: var(--spacing-sm); }
-.office-card__tag {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    padding: 3px 10px;
-    border-radius: 99px;
-}
-.office-card h3 {
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    margin: var(--spacing-sm) 0 8px;
-    line-height: 1.4;
-}
-.office-card .office-card__inner > p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-md);
-}
-.office-card__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm) 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-    margin-bottom: var(--spacing-sm);
-}
-.office-card__meta span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: var(--font-size-xs);
-    color: var(--color-text-secondary);
-}
-.contact-gallery__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: center;
-}
-.contact-gallery__images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-sm);
-}
-.contact-gallery__images img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    loading: lazy;
-}
-.contact-gallery__images img:first-child {
-    grid-column: span 2;
-    aspect-ratio: 16/7;
-}
-.contact-gallery__text h2 {
-    font-size: var(--font-size-2xl);
-    font-weight: 600;
-    margin: 12px 0 var(--spacing-sm);
-}
-.contact-gallery__text p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    line-height: 1.7;
 }
 
 /* =====================
