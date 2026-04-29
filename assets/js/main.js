@@ -29,6 +29,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// FAQ Toggle
+function toggleFaq(index) {
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach((item, i) => {
+        if (i === index) {
+            item.classList.toggle('open');
+        } else {
+            item.classList.remove('open');
+        }
+    });
+}
+
+// Init FAQ — add click listeners
+document.querySelectorAll('.faq-item').forEach((item, i) => {
+    const question = item.querySelector('.faq-item__question');
+    if (question) {
+        question.style.cursor = 'pointer';
+        question.addEventListener('click', () => toggleFaq(i));
+    }
+});
+
 // Office tabs filter
 function filterOffices(type, btn) {
     document.querySelectorAll('.offices-tab').forEach(t => t.classList.remove('active'));

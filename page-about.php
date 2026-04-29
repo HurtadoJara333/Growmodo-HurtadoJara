@@ -29,7 +29,7 @@
         <div class="about-hero__image">
             <div class="hero__image-glow"></div>
             <div class="about-hero__image-wrapper">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Real estate professional">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Real estate professional">
             </div>
         </div>
     </div>
@@ -139,7 +139,7 @@
             foreach ($team as $member) : ?>
             <div class="team-card card">
                 <div class="team-card__image">
-                    <img src="<?php echo $member['img']; ?>" alt="<?php echo $member['name']; ?>">
+                    <img loading="lazy" src="<?php echo $member['img']; ?>" alt="<?php echo $member['name']; ?>">
                 </div>
                 <div class="team-card__body">
                     <div class="team-card__social">

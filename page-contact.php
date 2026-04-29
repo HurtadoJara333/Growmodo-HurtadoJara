@@ -170,11 +170,11 @@
     <div class="container">
         <div class="contact-gallery__grid">
             <div class="contact-gallery__images">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80" alt="Office">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" alt="Team">
-                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&q=80" alt="Workspace">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80" alt="Meeting">
-                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80" alt="Team work">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80" alt="Office">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80" alt="Team">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&q=80" alt="Workspace">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80" alt="Meeting">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80" alt="Team work">
             </div>
             <div class="contact-gallery__text">
                 <div class="section-label">Our World</div>

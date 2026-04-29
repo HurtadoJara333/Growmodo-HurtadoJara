@@ -51,15 +51,15 @@
 <p class="property-card__desc"><?php echo wp_trim_words(get_the_excerpt(), 12); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
 <div class="property-card__specs">
 <span class="property-card__spec">
-<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bed.svg" alt="Bed" width="20" height="20">
+<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bed.svg" alt="Bed" width="20" height="20">
 <?php echo $bedrooms; ?>-Bedroom
 </span>
 <span class="property-card__spec">
-<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bath.svg" alt="Bath" width="20" height="20">
+<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-bath.svg" alt="Bath" width="20" height="20">
 <?php echo $bathrooms; ?>-Bathroom
 </span>
 <span class="property-card__spec">
-<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-villa.svg" alt="Type" width="20" height="20">
+<img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-villa.svg" alt="Type" width="20" height="20">
 <?php echo $type; ?>
 </span>
 </div>
