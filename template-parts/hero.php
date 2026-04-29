@@ -1,9 +1,6 @@
 <section class="hero" id="hero">
 <div class="container hero__inner">
 <div class="hero__content">
-<div class="hero__badge">
-<span>Discover Your Dream Property with Estatein</span>
-</div>
 <h1 class="hero__title">Discover Your Dream Property with Estatein</h1>
 <p class="hero__desc">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
 <div class="hero__actions">
